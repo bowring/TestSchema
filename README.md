@@ -1,0 +1,2 @@
+# TestSchema
+Testing XSD constructs
