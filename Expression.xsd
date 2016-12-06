@@ -19,8 +19,8 @@
             <xs:sequence>
                 <xs:element name="prettyName" type="xs:string"></xs:element>
                 <xs:element name="value" type="xs:decimal"></xs:element>
-                <xs:element name="leftET" type="Expression" minOccurs="0"/>                   
-                <xs:element name="rightET" type="Expression" minOccurs="0"/>                    
+                <xs:element name="leftET" ref="Expression" minOccurs="0"/>                   
+                <xs:element name="rightET" ref="Expression" minOccurs="0"/>                    
                 <xs:element name="operation" minOccurs="0">
                     <xs:complexType>
                         <xs:attribute name="class" type="xs:string"></xs:attribute>
