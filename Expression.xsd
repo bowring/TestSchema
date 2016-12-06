@@ -14,7 +14,7 @@
             
         </xs:documentation>
     </xs:annotation>    
-    <xs:element name="Expression">
+    <xs:element name="Expression" type="Expression">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="prettyName" type="xs:string"></xs:element>
