@@ -17,8 +17,9 @@
     <xs:element name="Expression" type="Expression"/>
            <xs:complexType name="Expression">
             <xs:sequence>
-                <xs:element name="prettyName" type="xs:string"></xs:element>
-                <xs:element name="value" type="xs:decimal"></xs:element>
+                <xs:element name="prettyName" type="xs:string" minOccurs="0"/>
+                <xs:element name="speciesName" type="xs:string" minOccurs="0"/>
+                <xs:element name="value" type="xs:decimal" minOccurs="0"/>
                 <xs:element name="leftET" type="Expression" minOccurs="0"/>                   
                 <xs:element name="rightET" type="Expression" minOccurs="0"/>                    
                 <xs:element name="operation" minOccurs="0">
