@@ -15,24 +15,28 @@
         </xs:documentation>
     </xs:annotation>    
     <xs:element name="Expression" type="Expression"/>
-           <xs:complexType name="Expression">
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="value" type="xs:decimal" minOccurs="0"/>
-                <xs:element name="leftET" type="Expression" minOccurs="0"/>                   
-                <xs:element name="rightET" type="Expression" minOccurs="0"/>                    
-                <xs:element name="operation" minOccurs="0">
-                    <xs:complexType>
-                        <xs:attribute name="class" type="xs:string"></xs:attribute>
-                    </xs:complexType>
-                </xs:element> 
-                <xs:element name="ratiosOfInterest" minOccurs="0">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="RawRatioNamesSHRIMP" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>              
-            </xs:sequence>
-           </xs:complexType>
+    <xs:complexType name="Expression">
+        <xs:choice>
+            <xs:element name="ExpressionTree" type="Expression">
+                <xs:sequence>
+                    <xs:element name="prettyName" type="xs:string"></xs:element>
+                    <xs:element name="value" type="xs:decimal"></xs:element>
+                    <xs:element name="leftET" type="Expression" minOccurs="0"/>                   
+                    <xs:element name="rightET" type="Expression" minOccurs="0"/>                    
+                    <xs:element name="operation" minOccurs="0">
+                        <xs:complexType>
+                            <xs:attribute name="class" type="xs:string"></xs:attribute>
+                        </xs:complexType>
+                    </xs:element> 
+                    <xs:element name="ratiosOfInterest">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="RawRatioNamesSHRIMP" maxOccurs="unbounded" type="xs:string"></xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>              
+                </xs:sequence>
+            </xs:element>
+        </xs:choice>
+    </xs:complexType>
 </xs:schema>
