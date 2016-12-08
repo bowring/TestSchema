@@ -45,7 +45,7 @@
             <xs:element name="leftET" type="Expression"/>                   
             <xs:element name="rightET" type="Expression"/>                    
             <xs:element name="Operation" type="Operation"/>
-            <xs:element name="ratiosOfInterest">
+            <xs:element name="ratiosOfInterest" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="ratio" minOccurs="0" maxOccurs="unbounded" type="rawRatioNamesSHRIMP"></xs:element>
