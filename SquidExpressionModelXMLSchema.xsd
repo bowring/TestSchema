@@ -32,9 +32,9 @@
     <xs:element name="Expression" type="Expression"/>
     <xs:complexType name="Expression">
         <xs:choice>
-            <xs:element name="ExpressionTree" type="ExpressionTree"/>
-            <xs:element name="ShrimpSpeciesNode" type="ShrimpSpeciesNode"/>
-            <xs:element name="ConstantNode" type="ConstantNode"/>
+            <xs:element name="ExpressionTree" type="ExpressionTree" minOccurs="0"/>
+            <xs:element name="ShrimpSpeciesNode" type="ShrimpSpeciesNode" minOccurs="0"/>
+            <xs:element name="ConstantNode" type="ConstantNode" minOccurs="0"/>
         </xs:choice>
     </xs:complexType>
     
@@ -43,7 +43,7 @@
         <xs:sequence>
             <xs:element name="name" type="xs:string"></xs:element>
             <xs:element name="leftET" type="Expression"/>                   
-            <xs:element name="rightET" type="Expression" minOccurs="0"/>                    
+            <xs:element name="rightET" type="Expression"/>                    
             <xs:element name="Operation" type="Operation"/>
             <xs:element name="ratiosOfInterest" nillable="true" minOccurs="0">
                 <xs:complexType>
