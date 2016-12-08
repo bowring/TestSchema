@@ -22,7 +22,6 @@
                 <Operation>
                     <name>divide</name>
                 </Operation>
-                <ratiosOfInterest/>
             </ExpressionTree>
         </leftET>
         <rightET>
@@ -44,7 +43,6 @@
                         <Operation>
                             <name>divide</name>
                         </Operation>
-                        <ratiosOfInterest/>
                     </ExpressionTree>
                 </leftET>
                 <rightET>
@@ -56,7 +54,6 @@
                 <Operation>
                     <name>pow</name>
                 </Operation>
-                <ratiosOfInterest/>
             </ExpressionTree>
         </rightET>
         <Operation>
