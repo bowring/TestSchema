@@ -44,7 +44,7 @@
             <xs:element name="name" type="xs:string"></xs:element>
             <xs:element name="leftET" type="Expression"/>                   
             <xs:element name="rightET" type="Expression"/>                    
-            <xs:element name="Operation" type="Operation"/>
+            <xs:element name="operation" type="Operation"/>
             <xs:element name="ratiosOfInterest" nillable="true" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
