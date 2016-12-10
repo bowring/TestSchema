@@ -47,8 +47,8 @@
             <xs:element name="operation" type="Operation"/>
             <xs:element name="ratiosOfInterest" nillable="true" minOccurs="0">
                 <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="ratio" minOccurs="0" maxOccurs="unbounded" type="rawRatioNamesSHRIMP"></xs:element>
+                    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="ratio" type="ratioType"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>              
@@ -79,6 +79,12 @@
         </xs:restriction>
     </xs:simpleType>
     
+    <xs:complexType name="ratioType">
+        <xs:sequence>
+            <xs:element name="name" type="rawRatioNamesSHRIMP"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:simpleType name="rawRatioNamesSHRIMP">
         <xs:restriction base="xs:string">
             <xs:enumeration value="r204_206w" />
